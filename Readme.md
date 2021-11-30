@@ -2,9 +2,9 @@
 
 repositorio teste learning
 
-[python org](https://docs.python.org/)
+[python.org](https://docs.python.org/)
 
 git diff é importante
 
-alteração through vim
+alteração through vim with GIT BASH
 

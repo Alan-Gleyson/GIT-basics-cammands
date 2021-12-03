@@ -1,10 +1,9 @@
 # Git learning
 
-repositorio teste learning
+## Repositório teste learning
 
 [python.org](https://docs.python.org/)
 
-git diff é importante
+- `git diff` é importante
 
-alteração through vim with GIT BASH
-
+alteração through _vim with GIT BASH_

@@ -1,9 +1,12 @@
-# Git learning
+# Git basics commands `GIT comandos básicos`
 
-## Repositório teste learning
 
-[python.org](https://docs.python.org/)
+Este reporitório contém um guia básico sobre GIT.
+Tendo como objetivo ser um guia básico de consulta
+para mim sobre tal tema. Espero que chegue a quem
+assim da mesma forma precisar esclarecer suas dúvidas.
 
-- `git diff` é importante
-
-alteração through _vim with GIT BASH_
+_This repository contains a basic guide on GIT.
+Aiming to be a basic reference guide
+for me on such a topic. I hope it gets to whoever
+so likewise need to clarify your doubts._

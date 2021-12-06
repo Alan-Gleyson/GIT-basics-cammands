@@ -50,3 +50,32 @@ criate folder on terminal
   - [ ] O `-u` "trackea" o path do upload, vai de branch main local,
    para o main do repositório remoto origin, é usado somente essa vez.
   - [ ] `git push origin main` - Para realizar push de commit.
+
+
+  ### ___checando reposotório remoto___
+
+  >``git remote`` - retorna o nome do repositório remoto "origin".
+  >
+  >`git remote -v` - info de _'fetch'_ e _'push'_.
+
+
+  ### ___clonando repositório___
+
+  ```
+  git clone <link_repositório_pra_clonar> <novo_nome_para_repositorio_clonado>
+  ```
+
+  * link SSH é mais rápido.
+  * Executar em uma pasta fora do seu repositório.
+  * Pode clonar outro reporitório mas, enviar as mudanças
+    somente funciona no reporitório próprio.
+
+
+  ### ___fork de repositório___
+
+  * É uma cópia de um projeto alheio.
+  * Podendo realizar contribuições (alterações).
+  * Informando as alterações feitas ao dono do projeto por Pull Request,
+    que irá decidir aceitar ou não.  
+  * click botão de fork no reporitório desejado no GitHub - escolhe o local
+    para fork do reposotório.

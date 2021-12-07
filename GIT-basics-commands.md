@@ -280,14 +280,12 @@ também ___commites___ ainda não enviados.
 
 ### ___Apagando tags e branches___
 
-apagando no reporitório local:
+- no reporitório local:
 
-___tag___ -  `git tag -d <tag> `
+>___tag___ :  `git tag -d <tag> `
+>___branche___ : `git branch -D <branch>`
 
-___branche___ - `git branch -D <branch>`
+- no reporitório remoto:
 
-apagando no reporitório remoto:
-
-___tag___ - `git push origin :<tag>`
-
-___branche___	- `git push origin :<branch-name>`
+>___tag___ : `git push origin :<tag>`
+>___branche___	: `git push origin :<branch-name>`

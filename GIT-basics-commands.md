@@ -256,7 +256,7 @@ git reset --hard <numero_hash_commit_anterior_ao_commit_q_será_desfeito>
     Ex: _`*.json` (todos os json não aparecerão no git status)_
 
   - **Por arquivo específico:**
-  	EX.: `db.xls` somente o arquivo `db.xls` não aparecerá
+  	EX.: `file.xls` somente o arquivo `file.xls` não aparecerá
 
 
   A collection of useful .gitignore templates
@@ -268,14 +268,14 @@ git reset --hard <numero_hash_commit_anterior_ao_commit_q_será_desfeito>
 Usado para criar um número de versão e
 anotaçães sobre release no repositório remoto
 
-`git tag -a <n°release> -m <"message">` - cria a tag
+`git tag -a <n°release> -m <"message">` : cria a tag
 
-`git tag` mostra as ___tags___ existentes (n° das versões)
+`git tag` :  ___mostra as tags___ existentes (n° das versões)
 
-O comando abaixo ___sobe ao GitHub___ não somente ___tags___ locais mas,
-também ___commites___ ainda não enviados.
+`git show <tag>` : ___mostra informações___ dessa tag
 
-  `git push origin main --tags`
+  `git push origin main --tags` : ___Envia as tags___ locais
+   ao repositório remoto.
 
 
 ### ___Apagando tags e branches___

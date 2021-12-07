@@ -13,6 +13,8 @@ criate folder on terminal
   ls -la | mostra diretórios ``.git``
   cd .git | abre o diretório oculto ``.git``
 
+  - O ___"ponto"___ em `.git`, significa arquivo oculto.
+
 ###  ___config___
 
   > `git status` - reporta status atual
@@ -101,38 +103,38 @@ criate folder on terminal
   enquanto não for aterado novamente e added.
 
 
-  ### ___git log___
+### ___git log___
 
 
-  > `git log` - Mostra para cada commit
-  > - [ ] commit: hash
-  > - [ ] author:
-  > - [ ] Date:
-  >
-  > `git show <numero hash do commit obtido no git log>` -
-  >			mostra all mudanças feitas pelo commite.
-  >
-  > `git diff` -
-  >			mostra mudanças antigas e as ainda não commitadas.
-  >
-  > `git diff --name-only`
-  >				show somente <nome> dos arquivos modificados - there is many files.
-  >
-  > `git log --decorate` -
-  >		branch to branch,
-  >		 se houve Merge.
-  >
-  > `git log --author="partes do nome"`
-  >
-  > `git log --graph` -
-  >		mostra timeline das branch e commit graficamente.
-  >
-  > `git shortlog` -
-  >		nome autor <qtd de commit>
-  >		 msg dos commit.
-  >
-  > `git shortlog -sn` -
-  >		<qtd de commit> nome author.
+> `git log` - Mostra para cada commit
+> - [ ] commit: hash
+> - [ ] author:
+> - [ ] Date:
+>
+> `git show <numero hash do commit obtido no git log>` -
+>			mostra all mudanças feitas pelo commite.
+>
+> `git diff` -
+>			mostra mudanças antigas e as ainda não commitadas.
+>
+> `git diff --name-only`
+>				show somente <nome> dos arquivos modificados - there is many files.
+>
+> `git log --decorate` -
+>		branch to branch,
+>		 se houve Merge.
+>
+> `git log --author="partes do nome"`
+>
+> `git log --graph` -
+>		mostra timeline das branch e commit graficamente.
+>
+> `git shortlog` -
+>		nome autor <qtd de commit>
+>		 msg dos commit.
+>
+> `git shortlog -sn` -
+>		<qtd de commit> nome author.
 
 
   ### ___Desfazendo mudanças no modified___
@@ -172,7 +174,7 @@ criate folder on terminal
 git reset --soft <numero_hash_commit_anterior_ao_commit_q_será_desfeito>
 ```
 
-- **remove o commit**, e retorna "1 nível abaixo", ou seja, **para a area de
+- **Remove o commit**, e retorna "1 nível abaixo", ou seja, **para a area de
 staged, com** as **modificações comitadas ateriormente**, pronto pra ser
 commitado again.
 
@@ -181,7 +183,7 @@ commitado again.
 git reset --mixed <numero_hash_commit_anterior_ao_commit_q_será_desfeito>
 ```
 
-- **remove o commit** e retorna "2 níveis abaixo", ou seja,
+- **Remove o commit** e retorna "2 níveis abaixo", ou seja,
 o arquivo **retorna** para **unstage**, **com** as **alterações anteriores**,
 prontas para serem add novamente para área staged .
  - [ ] Importante: altera o hitórico de commites <!--evitar usar se já tiver
@@ -191,7 +193,7 @@ prontas para serem add novamente para área staged .
 git reset --hard <numero_hash_commit_anterior_ao_commit_q_será_desfeito>
 ```
 
-- **"mata" o commit**, volta "3 níveis abaixo" ou seja, **apaga** junto
+- **"Mata" o commit**, volta "3 níveis abaixo" ou seja, **apaga** junto
   com as **alterações** **feitas** no commit e retorna ao estado antes
   dessa modificação.
 
@@ -240,3 +242,52 @@ git reset --hard <numero_hash_commit_anterior_ao_commit_q_será_desfeito>
   O novo fica na frente do bugado, podendo dar **checkout** no bugado pra voltar
   a esse estado e
   fazer o Debug
+
+
+  ### ___.gitignore___
+
+  Funciona como arquivo de texto
+
+  Cotêm padrões para **não trackear** arquivos, **impedindo o compartilhamento**
+  por extensão ou arquivos específicos, para tal, o arquivo `.gitignore` deve
+  conter as extensões `*.<extensão>` ou `<nomes>.<extensão-do-arquivo>`
+
+  - **Por extensão:**
+    Ex: _`*.json` (todos os json não aparecerão no git status)_
+
+  - **Por arquivo específico:**
+  	EX.: `db.xls` somente o arquivo `db.xls` não aparecerá
+
+
+  A collection of useful .gitignore templates
+  https://github.com/github/gitignore
+
+
+  ### ___Versionamento através de TAGs___
+
+Usado para criar um número de versão e
+anotaçães sobre release no repositório remoto
+
+`git tag -a <n°release> -m <"message">` - cria a tag
+
+`git tag` mostra as ___tags___ existentes (n° das versões)
+
+O comando abaixo ___sobe ao GitHub___ não somente ___tags___ locais mas,
+também ___commites___ ainda não enviados.
+
+  `git push origin main --tags`
+
+
+### ___Apagando tags e branches___
+
+apagando no reporitório local:
+
+___tag___ -  `git tag -d <tag> `
+
+___branche___ - `git branch -D <branch>`
+
+apagando no reporitório remoto:
+
+___tag___ - `git push origin :<tag>`
+
+___branche___	- `git push origin :<branch-name>`

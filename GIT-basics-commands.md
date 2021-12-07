@@ -79,3 +79,93 @@ criate folder on terminal
     que irá decidir aceitar ou não.  
   * click botão de fork no reporitório desejado no GitHub - escolhe o local
     para fork do reposotório.
+
+
+###  ___ciclo entre os status dos arquivos___
+
+- **UNTRACKED**. Para o GIT esse arquivo ainda não existe.
+  até que seja adicionado à área de stage usando `git add <file>`
+- **UNMODIFIED**. Depois de adicionado o arquivo ao GIT mas
+  ainda sem alteração. O arquivo pode ser removido de `UNMODIFIED`
+  e voltar ao estado de `untracked`.
+
+
+- **MODIFIED**. sai de unmodified depois de qualquer alteração,
+  não pode ser comitado nesse estado. Deve ser adicionado antes ->
+  `git add <file>`
+
+- **STAGED**. depois de modificado e feito esse hash (versão) ele fica na
+  área de stage. será enviado para o controle de versão se commitado.
+
+- **COMEBACK to UNMODIFIED**.
+  depois de 'commitada' a versão. Esse arquivo é
+  classificado como unmodified novamente nesse ponto não pode ser commitado
+  enquanto não for aterado novamente e added.
+
+
+  ### ___git log___
+
+
+  > `git log` - Mostra para cada commit
+  > - [ ] commit: hash
+  > - [ ] author:
+  > - [ ] Date:
+  >
+  > `git show <numero hash do commit obtido no git log>` -
+  >			mostra all mudanças feitas pelo commite.
+  >
+  > `git diff` -
+  >			mostra mudanças antigas e as ainda não commitadas.
+  >
+  > `git diff --name-only`
+  >				show somente <nome> dos arquivos modificados - there is many files.
+  >
+  > `git log --decorate` -
+  >		branch to branch,
+  >		 se houve Merge.
+  >
+  > `git log --author="partes do nome"`
+  >
+  > `git log --graph` -
+  >		mostra timeline das branch e commit graficamente.
+  >
+  > `git shortlog` -
+  >		nome autor <qtd de commit>
+  >		 msg dos commit.
+  >
+  > `git shortlog -sn` -
+  >		<qtd de commit> nome author.
+
+
+  ### ___desfazendo mudanças no modified___
+
+  (MODIFIED _**não added**_, desfaz modificação)
+  `git checkout <nome_do_arquivo>` ou
+
+  `git restore <nome_do_arquivo>` retorna ao estado anterior à modificação.
+
+  (MODIFIED _**added**_, _**staged**_) `git reset HEAD <name_do_arquivo>`
+  retira o arquivo do staged (to unstage)
+
+
+  ### ___stash___
+
+  > `git stash` - guarda _{indexa}_ mudanças ainda não commitadas em um  arquivo,
+  >  _work in progress - **WIP**_, podendo ser
+  >	 acessado quando se desejar.
+  >
+  > `git stash apply` - aplica as mudanças que foram salvas no stash.
+  >
+  > `git stash list` - mostra uma lista dos stash salvos.
+  >
+  > `git stash clear` - limpa todos os stash salvos.
+
+
+  ### ___commit___
+
+  > `git commit -am "aqui msg sobre alteração"`
+  >  - faz commit de file MODIFIED sem usar antes _**git add <file>**_
+  >
+  > `git commit -m "aqui a msg informando do que se trata a alteralção"`
+  >  - commita um arquivo já staged
+  >

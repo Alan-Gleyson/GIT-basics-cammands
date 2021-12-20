@@ -289,3 +289,11 @@ anotaçães sobre release no repositório remoto
 
 >___tag___ : `git push origin :<tag>`
 >___branche___	: `git push origin :<branch-name>`
+  
+ 
+### ___Fatal erro:___
+  
+  O erro fatal: refusing to merge unrelated histories
+  
+  `git pull origin main --allow-unrelated-histories`
+  

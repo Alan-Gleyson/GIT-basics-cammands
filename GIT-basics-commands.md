@@ -41,7 +41,7 @@ criate folder on terminal
 
 
   ### ___Ligando repositório local ao remoto___
-
+  `git add .` Colocar todos arquivos e pastas no stage, para usar `commit -m "<msg>"`
   ```
   git remote add origin <https://github.com/your_user/your_repository.git>
   git branch -M main
